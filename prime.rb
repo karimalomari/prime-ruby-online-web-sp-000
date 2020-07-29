@@ -1,15 +1,8 @@
-def prime?(x)
-  if x == 1
-    return true 
-  elsif x < 1
-    return false
+def prime?(integer)
+  if integer > 1
+    (2...integer).each {|n| return false if integer < 2 || integer % n == 0}
+    return true
   else
-  for y in 2..(x-1)
-    if (x % y) == 0
-      return false 
-    end
-  end 
-end
-
-  true
+    return false
+  end
 end
